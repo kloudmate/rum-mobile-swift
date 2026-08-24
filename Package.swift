@@ -10,8 +10,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "KloudMateRum",
-            url: "https://github.com/kloudmate/rum-mobile-swift/releases/download/0.3.1/KloudMateRum.xcframework.zip",
-            checksum: "28617cbd8a6b2dec239a682bb84a20f731b8452d634dc6411f7c6b06290a6ffb"
+            url: "https://github.com/kloudmate/rum-mobile-swift/releases/download/0.3.2/KloudMateRum.xcframework.zip",
+            checksum: "94422d45475073f60063cd7fc2f9f3431a58358ddf29038a9d0309ca1557f1ca"
         ),
     ]
 )
