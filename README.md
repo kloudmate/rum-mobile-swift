@@ -58,6 +58,26 @@ KloudMateRum.shared.instrument(configuration: configuration)
 let session = URLSession(configuration: configuration)
 ```
 
+## Sampling
+
+Two independent rates control how much data is sent, both 0.0 to 1.0 and
+defaulting to 1.0:
+
+```swift
+// Fraction of sessions to instrument at all. A session that is not sampled
+// sends nothing: no spans, no errors, no events. This is the main control
+// over data volume.
+config.sampleRate = 0.5
+
+// Of the sessions that are instrumented, the fraction that also record
+// session replay. Only takes effect when sessionReplayEnabled is true, and
+// narrows replay further because replay is the heaviest data the SDK sends.
+config.replaySampleRate = 0.2
+```
+
+The two compose: with `sampleRate = 0.5` and `replaySampleRate = 0.2`, half of
+sessions are instrumented and a fifth of those also carry replay.
+
 ## API reference
 
 ### Identity
