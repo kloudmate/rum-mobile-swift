@@ -18,24 +18,29 @@ Or add it to your `Package.swift`:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/kloudmate/rum-mobile-swift", from: "0.3.0")
+    .package(url: "https://github.com/kloudmate/rum-mobile-swift", from: "0.3.1")
 ]
 ```
 
 ## Getting started
 
-Initialise the SDK once, from your `AppDelegate` or `App` init:
+Initialise the SDK once, from your `AppDelegate` or `App` init. Only three
+fields are required; every other option has a default you can override
+individually:
 
 ```swift
 import KloudMateRum
 
-KloudMateRum.shared.doInit(config: KloudMateRumConfig(
+let config = KloudMateRumConfig(
     endpoint: "https://otel.kloudmate.com:4318",
     rumAccessToken: "pk_your_public_key",
-    applicationName: "MyApp",
-    deploymentEnvironment: "production",
-    version: "1.0.0"
-))
+    applicationName: "MyApp"
+)
+config.deploymentEnvironment = "production"
+config.version = "1.0.0"
+config.sessionReplayEnabled = true
+
+KloudMateRum.shared.doInit(config: config)
 ```
 
 Screen views, taps, app start, HTTP calls, crashes, and hangs are captured
