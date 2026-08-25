@@ -1,5 +1,14 @@
 # KloudMateRum for iOS
 
+[![License](https://img.shields.io/github/license/kloudmate/rum-mobile-swift)](LICENSE)
+[![Latest release](https://img.shields.io/github/v/release/kloudmate/rum-mobile-swift)](https://github.com/kloudmate/rum-mobile-swift/releases)
+
+
+
+[![Swift Package Index](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fkloudmate%2Frum-mobile-swift%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/kloudmate/rum-mobile-swift)
+[![Swift Package Index](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fkloudmate%2Frum-mobile-swift%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/kloudmate/rum-mobile-swift)
+
+
 Real User Monitoring for native iOS apps.
 
 ## Requirements
@@ -173,6 +182,15 @@ appear in one session:
 ```swift
 KloudMateRum.shared.integrateWithWebView(webView: webView)
 ```
+
+## Support
+
+Maintained by [KloudMate](https://kloudmate.com). Found a bug or have a
+question? [Open an issue](https://github.com/kloudmate/rum-mobile-swift/issues)
+on this repo.
+
+This package distributes a precompiled XCFramework; the Swift source lives in
+KloudMate's private mobile monorepo alongside the Android SDK.
 
 ## License
 
