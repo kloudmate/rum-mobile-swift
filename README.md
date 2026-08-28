@@ -27,7 +27,7 @@ Or add it to your `Package.swift`:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/kloudmate/rum-mobile-swift", from: "0.3.3")
+    .package(url: "https://github.com/kloudmate/rum-mobile-swift", from: "0.4.0")
 ]
 ```
 
